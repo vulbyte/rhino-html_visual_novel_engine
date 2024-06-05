@@ -8,6 +8,15 @@ a simple engine to take basic inputs, load scenes, then call certain things like
 
 ---
 
+## goals of the project
+
+- ACKSHUALLY make development of these faster;
+- keep it simple stupid;
+- keep everything using plain js and nothing fancy. no DSL (domain specific language);
+- mobile and desktop support for anything that supports html5 && css3
+
+---
+
 ## Startup
 
 ### 1. server for testing:
@@ -31,7 +40,7 @@ python3 custom_server.py ./index.html
 
 2.  set
     ```bash
-        config.json > "rhinoVNE" > "isPreplaced" to true and f!@#ing wing it
+    config.json > "rhinoVNE" > "isPreplaced" to true and f!@#ing wing it
     ```
 
 ---
