@@ -1,0 +1,18 @@
+{
+    "rhinoVNE": {
+        "isPreplaced": false
+    },
+    "developer": {
+        "debug_enabled": true
+    },
+    "display": {
+        "resolution": "auto"
+    },
+    "settings": {
+        "audio_volume": "100",
+        "sfx_volume": "100"
+    },
+    "error_handling": {
+        "missing_image_handling": "placeholder"
+    }
+}

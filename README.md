@@ -1,9 +1,42 @@
-# rhino-html_visual_novel_engine
+# rhino-html_visual_novel_engine (rhinoNVE)
 
-a simple engine to take basic inputs, load scenes, then call certain things like menus using intuitive funcitions
+---
 
-- why not use typescript?
-  using a weakly typed language, your inputs should always be checked and sanitized, never expect your inputs to be complaint.
+## description
+
+a simple engine to take basic inputs, load scenes, then call certain things like menus using intuitive functions
+
+---
+
+## Startup
+
+### 1. server for testing:
+
+to run local http server for testing:
+
+1. make sure python3 is isntalled
+2. run:
+
+```bash
+python3 custom_server.py ./index.html
+```
+
+### 2. pre-place or insert automatically
+
+1.  the recommended way to insert rhinoVNE into a scene is pre-place a canvas element with the id "rhino VNE" like:
+
+    ```html
+    <canvas id="rhinoVNE"></canvas
+    ```
+
+2.  set
+    ```bash
+        config.json > "rhinoVNE" > "isPreplaced" to true and f!@#ing wing it
+    ```
+
+---
+
+## example:
 
 the basic scene looks like this:
 
@@ -122,3 +155,12 @@ the basic scene looks like this:
         }
     }
 ```
+
+---
+
+## FAQ:
+
+- why not use typescript?
+  using a weakly typed language, your inputs should always be checked and sanitized, never expect your inputs to be complaint.
+
+---
