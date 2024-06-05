@@ -1,0 +1,25 @@
+{
+  "name": "rhino-html_visual_novel_engine",
+  "version": "0.0.1",
+  "description": "a visual novel engine where you simply create events with json, and use basic function calls to move around scenes",
+  "main": "main.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vulbyte/rhino-html_visual_novel_engine.git"
+  },
+  "keywords": [
+    "visual",
+    "novel",
+    "engine",
+    "javascript"
+  ],
+  "author": "vulbyte",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vulbyte/rhino-html_visual_novel_engine/issues"
+  },
+  "homepage": "https://github.com/vulbyte/rhino-html_visual_novel_engine#readme"
+}
