@@ -30,24 +30,24 @@ to run local http server for testing:
 python3 custom_server.py ./index.html
 ```
 
-### 2. pre-place or insert automatically
+### 2. pre place or insert automatically
 
-    choose either:
+choose either:
 
-    A:
-        the recommended way to insert rhinoVNE into a scene is pre-place a canvas element with the id "rhino VNE" like:
-        ```html
-            <canvas id="rhinoVNE"></canvas>
-        ```
-    or
+A:
+the recommended way to insert rhinoVNE into a scene is pre-place a canvas element with the id "rhino VNE" like:
 
-    B:
-        ```bash
-        config.json > "rhinoVNE" > "isPreplaced" = to true
-        ```
-        and f!@#ing wing it
+```html
+<canvas id="rhinoVNE"></canvas>
+```
 
-`
+or B:
+
+```bash
+config.json > "rhinoVNE" > "isPreplaced" = to true
+```
+
+and f!@#ing wing it
 
 ---
 
