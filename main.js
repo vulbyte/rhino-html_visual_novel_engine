@@ -1,19 +1,22 @@
 //entrypoint for the whole file
-import { ConsolePlus } from "./modules/ConsolePlus.js"
-//const ConsolePlus = require('./modules/ConsolePlus');
+import { ConsolePlus } from "./modules/ConsolePlus.js";
+import { TestAll } from "./tests/TEST-MASTER.js";
 
-ConsolePlus("PROGRAM STARTING");
+const { default: config } = await import(
+    "./config.json", { with: { type: "json" } }
+);
 
-ConsolePlus("loading...");
-ConsolePlus(["l", "main.js"]);
-
-ConsolePlus(["f", (2 * 3)]);
-
-try {
-    fakeFunction();
+// testing?
+// {{{1
+if (config.developer.tests_enabled == true) {
+    if (TestAll() == 0) {
+        console.log("[ KILLING PROCESS]: TESTS FAILED ");
+        exit();
+    }
 }
-catch (err) {
-    ConsolePlus(["e", err]);
-}
+// }}}1
+
+
+ConsolePlus(["f", "PROGRAM STARTING"]);
 
 ConsolePlus(['w', "END OF THE SCRIPT"]);

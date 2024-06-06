@@ -28,7 +28,7 @@ export function ConsolePlus(input) {
         case ("f"):
         case ("flag"):
             log.logType = "FLAG";
-            log.bgColor = "#0000ff";
+            log.bgColor = "#0000ff00";
             break;
 
         case ("l"):
@@ -36,8 +36,8 @@ export function ConsolePlus(input) {
         case ("loaded"):
         case ("loading"):
             log.logType = "LOAD";
-            log.bgColor = "#007799";
-            log.textColor = "white";
+            log.bgColor = "#007799ff";
+            log.textColor = "#ffffffff";
             break;
 
         case ("w"):
@@ -62,12 +62,11 @@ export function ConsolePlus(input) {
             break;
     }
 
-    console.log(
-        `%c [ ${log.logType} ]: ${input[1]} `,
-        `background: ${log.bgColor}; color: ${log.textColor};`
-    );
+    let string = [`%c [ ${log.logType} ]: ${input[1]}`, `background: ${log.bgColor}; color: ${log.textColor};`];
 
-    return;
+    console.log(string[0] + " ", string[1]);
+
+    return (string[0] + " " + string[1]); // THIS IS FOR DEBUGGING TO VALIDATE OUTPUT
 };
 
 
