@@ -32,16 +32,22 @@ python3 custom_server.py ./index.html
 
 ### 2. pre-place or insert automatically
 
-1.  the recommended way to insert rhinoVNE into a scene is pre-place a canvas element with the id "rhino VNE" like:
+    choose either:
 
-    ```html
-    <canvas id="rhinoVNE"></canvas
-    ```
+    A:
+        the recommended way to insert rhinoVNE into a scene is pre-place a canvas element with the id "rhino VNE" like:
+        ```html
+            <canvas id="rhinoVNE"></canvas>
+        ```
+    or
 
-2.  set
-    ```bash
-    config.json > "rhinoVNE" > "isPreplaced" to true and f!@#ing wing it
-    ```
+    B:
+        ```bash
+        config.json > "rhinoVNE" > "isPreplaced" = to true
+        ```
+        and f!@#ing wing it
+
+`
 
 ---
 
@@ -159,7 +165,6 @@ the basic scene looks like this:
                         ]
                     }
                 },
-
             ],
         }
     }
@@ -173,3 +178,7 @@ the basic scene looks like this:
   using a weakly typed language, your inputs should always be checked and sanitized, never expect your inputs to be complaint.
 
 ---
+
+## IMPORTANT!
+
+- due to this beign pre-1.0, there are many features that are inconsistent/missing. such as: testing currently only supports global testing, and not partial testing.

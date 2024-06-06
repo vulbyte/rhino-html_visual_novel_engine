@@ -1,10 +1,10 @@
 {
-    "rhinoVNE": {
-        "isPreplaced": false
-    },
     "developer": {
         "debug_enabled": true,
         "tests_enabled": true
+    },
+    "rhinoVNE": {
+        "isPreplaced": false
     },
     "display": {
         "resolution": "auto"

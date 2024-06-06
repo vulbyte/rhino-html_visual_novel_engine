@@ -5,7 +5,9 @@ import { TestConsolePlus } from "./TEST-ConsolePlus.js";
 
 export function TestAll() {
     if (TestConsolePlus() == 0) {
-
+        console.log(`%c [TEST RESULT ]: FAILED `, `background: #ff0000; color: #000000ff; `);
+        return 0;
     }
+    console.log(`%c [TEST RESULT ]: PASS `, `background: #00ff00; color: #000000ff; `);
 
 }

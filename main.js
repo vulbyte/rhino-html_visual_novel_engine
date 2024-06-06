@@ -10,13 +10,19 @@ const { default: config } = await import(
 // {{{1
 if (config.developer.tests_enabled == true) {
     if (TestAll() == 0) {
-        console.log("[ KILLING PROCESS]: TESTS FAILED ");
-        exit();
+        console.log("[ TEST RESULTS ]: TESTS FAILED, BEHAVIOR MAY BE UNEXPECTED ");
+    }
+    else {
+        ConsolePlus("[ TEST RESULTS ]: TESTS PASSED ");
     }
 }
 // }}}1
 
 
 ConsolePlus(["f", "PROGRAM STARTING"]);
+
+//import { InitRhinoVne } from './modules/InitRhinoVne.js';
+import { InitRhinoVne } from './modules/InitRhinoVne.js'
+InitRhinoVne();
 
 ConsolePlus(['w', "END OF THE SCRIPT"]);

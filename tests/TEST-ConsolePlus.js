@@ -28,11 +28,11 @@ export function TestConsolePlus() {
         //        },
     ];
 
-    console.log(`%c [TESTING]: ConsolePLUS `, `background: #ffff00; color: #000000; `)
+    console.log(`%c [ TESTING ]: ConsolePLUS `, `background: #ffff00; color: #000000; `)
     for (let i = 0; i < tests.length; ++i) {
         if (tests[i].result != tests[i].target) {
             console.log(
-                `%c [TEST RESULT ]: FAIL `, `background: #ff0000; color: #ffffffff; `, "\n",
+                `%c [ TEST ]: FAIL `, `background: #ff0000; color: #ffffffff; `, "\n",
                 "got:      ", tests[i].result, "\n",
                 "expected: ", tests[i].target, "\n"
             );
@@ -40,7 +40,7 @@ export function TestConsolePlus() {
             return 0;
         }
 
-        console.log(`%c [TEST RESULT ]: PASS `, `background: #00ff00; color: #000000ff; `);
+        console.log(`%c [ TEST RESULT ]: PASS `, `background: #00ff00; color: #000000ff; `);
         continue;
     }
     return 1;
