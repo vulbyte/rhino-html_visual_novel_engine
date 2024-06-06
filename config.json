@@ -3,11 +3,21 @@
         "debug_enabled": true,
         "tests_enabled": true
     },
-    "rhinoVNE": {
+    "init": {
         "isPreplaced": false
     },
     "display": {
-        "resolution": "auto"
+        "resolution": {
+            "type": "auto",
+            "resolution": {
+                "x": 600,
+                "y": 400
+            }
+        },
+        "auto_defaults": {
+            "x_margin": "90",
+            "y_margin": "90"
+        }
     },
     "settings": {
         "audio_volume": "100",

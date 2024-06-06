@@ -18,11 +18,14 @@ if (config.developer.tests_enabled == true) {
 }
 // }}}1
 
-
-ConsolePlus(["f", "PROGRAM STARTING"]);
-
-//import { InitRhinoVne } from './modules/InitRhinoVne.js';
+// create new canvas or connect to it
 import { InitRhinoVne } from './modules/InitRhinoVne.js'
 InitRhinoVne();
 
+import { ConfigureRhinoVne } from './modules/ConfigureRhinoVne.js'
+ConfigureRhinoVne();
+
+ConsolePlus("initialization finished");
+
+ConsolePlus(["f", "PROGRAM STARTING"]);
 ConsolePlus(['w', "END OF THE SCRIPT"]);

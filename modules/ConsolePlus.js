@@ -54,8 +54,8 @@ export function ConsolePlus(input) {
         case ("error"):
         case ("errors"):
             log.logType = "ERROR";
-            log.bgColor = "red";
-            log.textColor = "white";
+            log.bgColor = "#ff000000";
+            log.textColor = "#ffffffff";
             break;
 
         default:

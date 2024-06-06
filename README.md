@@ -47,6 +47,47 @@ or B:
 config.json > "rhinoVNE" > "isPreplaced" = to true
 ```
 
+NOTE!:
+
+> if preplaced is true, it will assume the container above has all the styling properties you desire. if automatic it'll center the canvas within the div
+
+rhino will then check:
+
+```json
+{
+    ...
+    "display": {
+        "resolution": {
+            "type": x
+        }
+    }
+    ...
+}
+```
+
+the 2 options for this setting are:
+`auto` and `manual`, if neither are present then the default is "auto".
+
+auto by default will take the window.width and window.height and make the canvas 90%, unless the settings in:
+
+```json
+{
+    ...
+    "display": {
+        "auto_defaults:" {
+            "x": "90",
+            "y": "90"
+        }
+    }
+    ...
+}
+```
+
+are changed.
+
+rhinoVne expects at least a body element to be present,
+if not it will create one (body element) then apply it to the first div within said canvas to it
+
 and f!@#ing wing it
 
 ---
