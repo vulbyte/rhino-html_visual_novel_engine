@@ -3,9 +3,6 @@
         "debug_enabled": true,
         "tests_enabled": true
     },
-    "init": {
-        "isPreplaced": false
-    },
     "display": {
         "resolution": {
             "type": "auto",
@@ -19,11 +16,25 @@
             "y_margin": "90"
         }
     },
+    "error_handling": {
+        "missing_image_handling": "placeholder"
+    },
+    "init": {
+        "isPreplaced": false
+    },
+    "project_info": {
+        "title": "rhinoVne"
+    },
     "settings": {
         "audio_volume": "100",
         "sfx_volume": "100"
     },
-    "error_handling": {
-        "missing_image_handling": "placeholder"
+    "styling": {
+        "default_font_size": "30px",
+        "default_font_family": "Sans-Serif",
+        "default_bg_color": "#333333",
+        "default_bg_padding": "15px",
+        "default_line_width": "5px",
+        "default_stroke_color": "#770077"
     }
 }

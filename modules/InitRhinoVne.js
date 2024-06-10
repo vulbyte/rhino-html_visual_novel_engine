@@ -47,7 +47,7 @@ export function InitRhinoVne() {
 
     div.appendChild(rhinoVne);
     div.setAttribute("id", "rhinoVneContainer");
-    div.style.backgroundColor = "#000000";
+    div.style.backgroundColor = "#333333";
     div.style.margin = "auto";
     div.style.display = "flex";
     div.style.justifyContent = "center";

@@ -1,0 +1,80 @@
+import { ConsolePlus } from "./ConsolePlus.js";
+
+const { default: config } = await import(
+    '../config.json', { with: { type: "json" } }
+);
+
+
+export class RhinoCalc {
+
+    rhinoVne;
+    rhinoContext;
+    rhinoRect;
+
+    constructor() {
+        try {
+            this.rhinoVne = document.getElementById('rhinoVne');
+            this.rhinoContext = rhinoVne.getContext('2d');
+            this.rhinoRect = rhinoVne.getBoundingClientRect();
+        }
+        catch (err) {
+            ConsolePlus(["e", err]);
+        }
+    }
+
+    findWidth(percent) { //returns an absolute float
+        return ((this.rhinoRect.width * (percent / 100)));
+    };
+    findHeight(percent) { // returns an absolute float
+        return ((this.rhinoVne.height * (percent / 100)));
+    };
+    findCenter() {
+        return (findWidth() / 2);
+    };
+
+    /**
+    * used to place an object aligned left.
+    * ex: fillText("example_text", RhinoCalc.placeLeft)
+    * @param {number} percent
+    */
+    placeLeft(percent) { //to be used with an x placement, ie: 
+
+    };
+
+    /**
+        * used to place an object aligned to the center.
+        * ex: fillText("example_text", RhinoCalc.placeCenter)
+        * @param {string} text
+        * @param {string} textColor
+        * @param {string} textSize
+        * @param {string} textXPos
+    */
+    placeCenteredText(text, textColor, textSize, textYPos) {
+        if (!String(textColor).includes("#")) {
+            textColor += "#" + textColor;
+        }
+
+        ConsolePlus("adding text")
+
+        let vne = rhinoVne.getContext('2d');
+        vne.font = `${textSize}px ${config.styling.default_font}`;
+        vne.fillStyle = textColor;
+        vne.fillText(
+            String(text),
+            Number((rhinoVne.width / 2)),
+            Number(this.findHeight(textYPos))
+        );
+
+        ConsolePlus("added text")
+    };
+
+    /**
+    * used to place an object aligned to the rigth.
+    * ex: fillText("example_text", RhinoCalc.placeRight)
+    * @param {number} percent
+    */
+    placeRight(percent) {
+
+    };
+
+};

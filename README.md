@@ -90,6 +90,16 @@ if not it will create one (body element) then apply it to the first div within s
 
 and f!@#ing wing it
 
+## game starting
+
+after the above the game will launch into the menu, which will look into:
+
+```js
+config.json > project_info > title;
+```
+
+and display the title, along with the basic menu info
+
 ---
 
 ## example:
@@ -100,8 +110,9 @@ the basic scene looks like this:
 
     scene-id: {
         scene_info: {
-            scene_number: 0001,
             tod: 1800, //time of day
+            prev_scene: "scene-id(-1)",
+            next_scene: "scene-id(+1)"
         },
         character1: { //the name can be changes if desired
             name: "vulbyte",

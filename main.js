@@ -28,4 +28,8 @@ ConfigureRhinoVne();
 ConsolePlus("initialization finished");
 
 ConsolePlus(["f", "PROGRAM STARTING"]);
+
+import { GameStateManager } from './modules/gamestateManager.js'
+await GameStateManager();
+
 ConsolePlus(['w', "END OF THE SCRIPT"]);

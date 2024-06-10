@@ -21,6 +21,13 @@ export function ConsolePlus(input) {
     }
 
     switch (input[0]) {
+        case ("tests"):
+        case ("test"):
+        case ("t"):
+            log.logType = "TEST";
+            log.bgColor = "#770077ff"
+            log.textColor = "#00ff00ff"
+            break;
         case ("o"):
         case ("out"):
         case ("output"):

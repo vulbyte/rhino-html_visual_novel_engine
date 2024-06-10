@@ -2,6 +2,10 @@ const { default: config } = await import(
     '../config.json', { with: { type: "json" } }
 );
 
+const { default: GLOBAL_STATE } = await import(
+    '../GLOBAL_STATE.json', { with: { type: "json" } }
+);
+
 import { ConsolePlus } from "./ConsolePlus.js"
 
 export function ConfigureRhinoVne() {
@@ -10,10 +14,12 @@ export function ConfigureRhinoVne() {
 
     if (config.display.resolution.type == "auto") {
         // x
-        rhinoVne.width = window.innerWidth * (config.display.auto_defaults.x_margin / 100);
+        let width = window.innerWidth * (config.display.auto_defaults.x_margin / 100);
+        rhinoVne.width = width;
         ConsolePlus("width applied");
         // y
-        rhinoVne.height = window.innerHeight * (config.display.auto_defaults.y_margin / 100);
+        let height = window.innerHeight * (config.display.auto_defaults.y_margin / 100);
+        rhinoVne.height = height;
         ConsolePlus("height applied");
     }
 
